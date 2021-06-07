@@ -1,0 +1,27 @@
+h1 {
+color:white;
+text-align: center;
+}
+
+body{
+    background-image: url("background.png");
+    background-color: #333333; 
+    text-align: center;
+}
+
+div{
+    border-radius: 25px;
+    width: fit-content;
+    height: fit-content;
+    right: 0;
+    left: 0;
+    margin-top: 50px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 50px;
+    border: 5px solid pink;
+    box-sizing: border-box;
+    background-color: white;
+    text-align: center;
+    position: fixed;
+}
