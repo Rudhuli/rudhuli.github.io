@@ -3,14 +3,32 @@
     <head>
         <link rel="stylesheet" type="text/css" href="stylesheet.css"
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Lauren Watkins Website Portfolio</title>
     </head>
     <body>
-        <h1> Lauren Watkins Website Portfolio</h1>
-        <img src="header.png" alt="header">
-        <div>
-            <br>
-        <p> This website was created for the purpose of documenting my programming and coding experiences. </p> 
+        <img id="myHeader" img src="header1.png" style="max-width:100%;height:auto;" alt="header">
+           <center><input type="button" onclick="changeImage()" value="Change Header Image"/></center>
+        
+        <script>
+            function changeImage(){
+                var image = document.getElementById('myHeader');
+                if (image.src.match("header1.png")){
+                    image.src = "header2.png";
+                }
+                else {
+                    image.src = "header1.png";
+                   }
+            }
+            </script>
+            <div>
+            <img src="maki.png" style="padding-right: 5%; padding-left: 2%; float: left;" >
+            <p>This website serves as the coding and programming Portfolio for Lauren Watkins. At the moment this website has been codded with HTML, CSS, and minimal JavaScript.
+            <br><br>
+            In addition to learning progamming, Lauren is proficient in Adobe applications which she uses to create Graphic Design elements. Her digital illustration skills are mostly used within Paint Tool Sai 2. Other skills include Vtuber Model Rigging within Live 2D Cubism Editor. 
+                </p>    
+                </div>
+            </div>
         </div>
     </body> 
 </html> 
