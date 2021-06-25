@@ -11,8 +11,8 @@
 // kind of confused on this one - had to look up alot
 
 function sortNumber() {
-numbers.sort(function(a, b){return a-b});
-document.getElementById("sort").innerHTML = numbers;
+  numbers.sort(function(a, b){return a-b});
+  document.getElementById("sort").innerHTML = numbers;
 }
 
 var numbers = [17, 12, 37, 2, 8, 14, 1, 99];
@@ -24,11 +24,16 @@ document.getElementById("sort").innerHTML = numbers;
 
 
 function sortLetters() {
-  letters.sort();
+  letters = letters.sort(function(a, b) {
+    if (a.toLowerCase() === b.toLowerCase()) {
+      return a > b ? 1 : -1;
+    }
+    return a.toLowerCase() < b.toLowerCase() ? -1 : 1;
+  });
   document.getElementById("sort2").innerHTML = letters;
 }
 
-var letters = [ "g", "f", "a", "t", "h", "l", "u", "b"];
+var letters = [ "g", "f", "a", "t", "T", "h", "l", "u", "b"];
 document.getElementById("sort2").innerHTML = letters;
 
 
@@ -44,11 +49,15 @@ function isEven(){
 
   //if the remainder value is 0 then it is an even number
   //we are using % modulus operator to get the remainder value
-  if ( num % 2 == 0) {
+  if ( num % 2 === 0) {
+    //using string interpolation to simplify the resulting string
+      // document.getElementById('result').innerHTML = `${num} is ${num % 2 === 0 ? '' : 'not'} even.`;
       document.getElementById('result').innerHTML = num + ' is even. True';
   }else{
+      // document.getElementById('result').innerHTML = `${num} is not even. False`;
       document.getElementById('result').innerHTML = num + ' is not even. False';
   }
+
 }        
 
 // CHALLENGE 4
@@ -71,13 +80,14 @@ function reverseSentence(sentence) {
 
 
 function onlyStrings(value){
-  if (typeof (value) === 'string'){
+  if (typeof value === 'string'){
     return value;}
   document.getElementById('numstr').innerHTML = stringsOnly;
 }
 
   var returnArray = [4, "billy is best boy", 7, "pascal is demon child", 22, "bobby is babby"];
   var stringsOnly = returnArray.filter(onlyStrings);
+
   document.getElementById('numstr').innerHTML = returnArray;
 
 
