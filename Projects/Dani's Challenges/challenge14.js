@@ -36,8 +36,6 @@ function findMaxLoop(numbers) {
 
 console.log(findMaxLoop([42, 34, 8, 13, -9, 101]));
 
-
-
 /////////////////////////////// USING REDUCE/////////////////////////////////////////
 
 // { let numbers = [5, 7, 27, 31, 18, 4, 101]

@@ -4,7 +4,7 @@
 
 
 function toCelcius(far) {
-    var cel;
+    let cel;
     cel = (far - 32) * 5 / 9;
     return cel;
 }

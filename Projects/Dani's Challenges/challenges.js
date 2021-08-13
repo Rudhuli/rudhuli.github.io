@@ -103,3 +103,19 @@ function isDivisibleby(){
     }else{
       document.getElementById('resultDivide').innerHTML = false;
     }}
+
+    function test(g) {
+      if (g === true) {
+        var x = 5;
+      }
+      console.log(x);
+      if (g === true) {
+        let y = 6;
+      }
+      console.log(y)
+    }
+
+
+
+
+    /// addTogether(2)(3) // shoudl return 5 /// DANIS MEAN QUESTION
