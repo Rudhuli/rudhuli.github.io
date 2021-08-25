@@ -1,3 +1,4 @@
+
 .headContainer{
   margin: auto;
   width: auto;
@@ -45,6 +46,11 @@ figure {
   margin: auto;
   width: auto;
   min-height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh; 
+  color: #404040;
 }
 
 .footerContainer{
