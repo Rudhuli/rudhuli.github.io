@@ -2444,7 +2444,6 @@ export const options = {
   'MAIDEN',
   'MALE BUFFOON',
   'MALEWIFE',
-  'MAMMY ARCHETYPE',
   'MAN ALONE',
   'MANIC PIXIE DREAM GIRL',
   'MARTYR',
