@@ -4,7 +4,7 @@
     --white: #ffffff;
     --grey: #ededed;
     --pink: #f29991;
-    --dark-grey: ##404040;
+    --dark-grey: #404040;
     --black: #000000;
 
   }
@@ -38,14 +38,118 @@
       display: block;
       margin: auto; 
       color: var(--white);
-      font-size: 5vmin;
+      font-size: 4vmin;
   }
 
   body {
     background-color: var(--grey);
   }
 
+  #about {
+    align-content: center;
+    background-color: var(--grey);
+    display: flex;
+    height: 300px;
+    justify-content: center;
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+    width: 70%;
+  }
+
+  #skills {
+    align-content: center;
+    background-color: var(--white);
+    display: flex;
+    height: 300px;
+    justify-content: center;
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+  }
+
+  #work {
+    align-content: center;
+    background-color: var(--grey);
+    display: flex;
+    height: 300px;
+    justify-content: center;
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+  }
+
+  article {
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+    display: block;
+    margin: auto;
+    width: 50%;
+  }
+
+  hr {
+    border-top: 3px solid var(--pink);
+    justify-content: center;
+    width: 600px;
+    margin: auto;
+    box-shadow: 0px 5px 20px rgba(0,0,0, 0.3);
+  }
+
+.hr { 
+    text-align: center;
+}
+
+.hr img {
+    width: 50px;
+    position: relative;
+    top: -21px;
+    padding:0 5px;
+    
+}
+
+h1 {
+    font-family: Consolas;
+}
+
+h2 {
+    margin-bottom: 25px;
+    font-family: Courier;
+}
+
+h4 {
+    font-family: Consolas;
+}
+
+  /* PROGRESS BARS */
+
+  .animated-progress {
+    width: 300px;
+    height: 30px;
+    border-radius: 5px;
+    margin: 20px 10px;
+    border: 1px solid rgb(189, 113, 113);
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .animated-progress span {
+    height: 100%;
+    display: block;
+    width: 0;
+    color: rgb(255, 251, 251);
+    line-height: 30px;
+    position: absolute;
+    text-align: end;
+    padding-right: 5px;
+  }
+  
+  .progress-blue span {
+    background-color: blue;
+  }
+
   /* NAVBAR STYLING STARTS */
+
 
   .navbar {
       display:flex;
@@ -54,6 +158,9 @@
       padding: 20px;
       background-color: var(--white);
       color: var(--black);
+      position: relative;
+      z-index: 10;
+      box-shadow: 0px 8px 20px rgba(0,0,0, 0.2);
   }
 
   .nav-links a {
@@ -62,15 +169,15 @@
 
   .menu {
       display: flex;
-      gap: 1em;
-      font-size: 18px;
+      gap: 3em;
+      font-size: 25px;
+      font-family: Consolas;
   }
 
-  .menu li:hover {
-      background-color: var(--grey);
-      border-radius: 5px;
-      transition: 0.3s ease;
-  }
+
+  .menu li a:hover {
+    color: var(--pink)!important;
+}
 
   .menu li {
       padding: 5px 14px;
@@ -81,12 +188,14 @@
   }
 
   .dropdown {
-      background-color: var(--pink);
+      background-color: var(--white);
       padding: 1em 0;
       position: absolute;
       display: none;
       border-radius: 8px;
       top: 35px;
+      border: 1px solid var(--grey);
+
   }
 
   .dropdown li + li {
@@ -100,7 +209,7 @@
   }
 
   .dropdown li:hover {
-      background: var(--black);
+      background: var(--grey);
   }
 
   .projects:hover .dropdown {
@@ -128,6 +237,7 @@
           left: 0;
           text-align: center;
           padding: 16px 0;
+
         }
         .menu li:hover {
             display: inline-block;
