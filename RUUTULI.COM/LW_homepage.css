@@ -1,0 +1,326 @@
+/* UTILITIES */
+
+:root {
+    --white: #ffffff;
+    --grey: #ededed;
+    --pink: #f29991;
+    --dark-grey: #404040;
+    --black: #000000;
+
+  }
+
+  * {
+      margin: 0;
+      padding:0;
+      box-sizing: border-box;
+  }
+
+  a {
+      text-decoration: none;
+  }
+
+  li {
+      list-style: none;
+  }
+
+  header{
+    display: flex;    
+    background-image: url('./images/close-up-hand-taking-notes-darker.jpg');
+    background-size: cover;
+    justify-content: center;
+    height: 500px;  
+  }
+
+  .header { 
+      text-align: center;
+      align-content: center;
+      justify-content: center;
+      display: block;
+      margin: auto; 
+      color: var(--white);
+      font-size: 4vmin;
+  }
+
+  body {
+    background-color: var(--grey);
+  }
+
+  #about {
+    align-content: center;
+    background-color: var(--grey);
+    display: flex;
+    height: fit-content;
+    justify-content: center;
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+    width: 70%;
+  }
+
+  #skills {
+    align-content: center;
+    background-color: var(--white);
+    display: flex;
+    height: fit-content;
+    justify-content: center;
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+  }
+
+  #work {
+    align-content: center;
+    background-color: var(--grey);
+    display: flex;
+    height: fit-content;
+    justify-content: center;
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+  }
+
+  article {
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+    display: block;
+    margin: auto;
+    width: 50%;
+  }
+
+  hr {
+    border-top: 3px solid var(--pink);
+    justify-content: center;
+    width: 600px;
+    margin: auto;
+    box-shadow: 0px 5px 20px rgba(0,0,0, 0.3);
+  }
+
+.hr { 
+    text-align: center;
+}
+
+.hr img {
+    width: 50px;
+    position: relative;
+    top: -21px;
+    padding:0 5px;
+    
+}
+
+h1 {
+    font-family: Consolas;
+}
+
+h2 {
+    margin-top: 40px;
+    margin-bottom: 25px;
+    font-family: Courier;
+}
+
+h4 {
+    font-family: Consolas;
+}
+
+
+p {
+    padding: 2em;
+}
+
+  /* SKILL BARS ------------------------------------------------------------*/
+
+  .float-container {
+    border: 3px solid #fff;
+    padding: 10px;
+    box-sizing:content-box!important;    
+}
+
+.float-child {
+    width: 50%;
+    float: left;
+    padding: 2px;
+    padding-right: 15px;
+    padding-left: 15px;
+}  
+
+
+.skillbar {
+	position:relative;
+	margin-bottom: 15px;
+	width: 100%;
+	background: #eee;
+	height: 35px;
+	border-radius: 25px;	
+    border: 2px solid var(--pink);
+    box-sizing:content-box !important;
+
+}
+
+.skillbar-title {
+	position:absolute;
+	top:0;
+	left:0;
+	/* width:50px; */
+	font-weight: bold;
+	font-size: 13px;
+	color: #fff;
+	border-top-left-radius: 25px;
+	border-bottom-left-radius: 25px;
+	margin: 0;
+
+}
+
+.skillbar-title span {
+	display: block;
+	/* background: rgba(0, 0, 0, 0.1); */
+	padding: 0 20px;
+	height:35px;
+	line-height: 35px;
+	border-top-left-radius:25px;
+	border-bottom-left-radius:25px;
+
+}
+
+.skillbar-bar {
+	height: 35px;
+	width: 0%;
+	border-radius: 25px;
+	transition: 500ms linear;
+	transition-property: width, background-color;
+
+}
+
+.skill-bar-percent {
+	position: absolute;
+	right: 10px;
+	top: 0;
+	font-size: 15px;
+	height: 35px;
+	line-height: 35px;
+	color: rgba( 0, 0, 0, 0.4 );
+	transition: color 500ms ease-out;
+}
+
+.skillbar-bar {
+	background: var(--pink);	
+}
+
+.complete .skill-bar-percent {
+	color: var(--black);
+}
+
+
+  /* NAVBAR STYLING STARTS ----------------------------------------------------*/
+
+
+  .navbar {
+      display:flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      background-color: var(--white);
+      color: var(--black);
+      position: relative;
+      z-index: 10;
+      box-shadow: 0px 8px 20px rgba(0,0,0, 0.2);
+  }
+
+  .nav-links a {
+      color:var(--black);
+  }
+
+  .menu {
+      display: flex;
+      gap: 3em;
+      font-size: 25px;
+      font-family: Consolas;
+  }
+
+
+  .menu li a:hover {
+    color: var(--pink)!important;
+}
+
+  .menu li {
+      padding: 5px 14px;
+  }
+
+  .projects {
+      position: relative;
+  }
+
+  .dropdown {
+      background-color: var(--white);
+      padding: 1em 0;
+      position: absolute;
+      display: none;
+      border-radius: 8px;
+      top: 35px;
+      border: 1px solid var(--grey);
+
+  }
+
+  .dropdown li + li {
+      margin-top: 10px;
+  }
+
+  .dropdown li {
+      padding: 0.5em 1em;
+      width: 8em;
+      text-align: center;
+  }
+
+  .dropdown li:hover {
+      background: var(--grey);
+  }
+
+  .projects:hover .dropdown {
+      display: block;
+  }
+  
+  /*RESPONSIVE NAVBAR MENU STARTS*/
+
+  input[type=checkbox]{
+      display: none;
+  }
+
+  .hamburger {
+      display: none;
+      font-size: 24px;
+      user-select: none;
+  }
+
+  @media (max-width: 768px) {
+      .menu {
+          display: none;
+          position: absolute;
+          background-color: var(--dark-grey);
+          right: 0;
+          left: 0;
+          text-align: center;
+          padding: 16px 0;
+
+        }
+        .menu li:hover {
+            display: inline-block;
+            background-color: var(--dark-grey);
+            transition: 0.3s ease;
+        }
+        .menu li + li {
+            margin-top: 12px;
+        }
+        input[type=checkbox]:checked ~ .menu{
+            display: block;
+        }
+        .hamburger {
+            display: block;
+        }
+        .dropdown {
+            left: 50%;
+            top: 30px;
+            transform: translateX(35%);
+        }
+        .dropdown li:hover {
+            background-color: var(--dark-grey);
+        }
+  }
